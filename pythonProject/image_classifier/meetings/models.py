@@ -1,6 +1,5 @@
 from django.db import models
 from datetime import time
-import uuid
 
 
 class Room(models.Model):
@@ -14,6 +13,5 @@ class Meeting(models.Model):
     date = models.DateField()
     start_time = models.TimeField(default=time(9))
     duration = models.IntegerField(default=1)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
 
-# 4e0da284-5bbc-4139-be65-a7219d6c989b
+

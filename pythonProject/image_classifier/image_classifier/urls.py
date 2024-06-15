@@ -31,7 +31,7 @@ urlpatterns = [
     path('home', welcome, name="home"),
     path('', welcome, name="homebase"),
     path('about', about),
-    path('meetings/faraway/<int:id>', detail, name="detail"),
-    path('rooms/ha/<int:id>', roomdetail, name="roomdetail"),
+    path('meetings/<int:id>', detail, name="detail"),
+    path('rooms/<int:id>', roomdetail, name="roomdetail"),
 
 ]
