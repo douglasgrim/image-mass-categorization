@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Welcome</title>
+</head>
+<body>
+    <h1>Welcommen eh</h1>
+    <div style="{{style}}">{{foo}}</div>
+    <div>My Meats:</div>
+    <div>
+        {% for meeting in meetings %}
+        <div>
+            <a href="{% url 'detail' meeting.id %}">
+                {{ meeting.title }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        {% for room in rooms %}
+        <div>
+            <a href="{% url 'roomdetail' room.id %}">
+                {{ room.name }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
