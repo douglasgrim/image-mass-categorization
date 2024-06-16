@@ -5,9 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+    {% for room in rooms %}
         <div>
             This is a good room: {{room.name}}
         </div>
+    {% endfor %}
     <a href="{% url 'home' %}">Home</a>
 </body>
 </html>

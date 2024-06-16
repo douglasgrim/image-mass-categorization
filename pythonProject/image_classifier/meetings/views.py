@@ -13,11 +13,20 @@ def detail(request, id):
     )
 
 
-def roomdetail(request, id):
-    room = get_object_or_404(Room, pk=id)
+def rooms_list(request):
+    rooms = Room.objects.all()
     return render(
         request,
+        'rooms/list.html',
+        {'rooms': rooms}
+    )
+
+
+def roomdetail(request, id):
+    room = get_object_or_404(Room, pk=id)
+    return render (
+        request,
         'rooms/detail.html',
-        {'room': room}
+        { 'room': room }
     )
 # Create your views here.
